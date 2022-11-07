@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
     options: IRegion[] = [];
     statesList: Observable<IRegion[]> | undefined;
 
+    statesAbbreviation: any;
+
     constructor() {
         this.options = this.getAll();
     }
@@ -49,5 +51,6 @@ export class AppComponent implements OnInit {
     selectState(value: any) {
         // TODO: use this method to get an abbreviation code - this.getStatesAbbreviation(value);
         console.log(this.getStatesAbbreviation(value));
+        this.statesAbbreviation = this.getStatesAbbreviation(value);
     }
 }

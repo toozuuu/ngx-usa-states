@@ -98,6 +98,37 @@
           }
         }
       }
+    },
+    "ngx-usa-states-list": {
+      "projectType": "library",
+      "root": "projects/ngx-usa-states-list",
+      "sourceRoot": "projects/ngx-usa-states-list/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-usa-states-list/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-usa-states-list/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-usa-states-list/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-usa-states-list/src/test.ts",
+            "tsConfig": "projects/ngx-usa-states-list/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-usa-states-list/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
